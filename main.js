@@ -32,9 +32,43 @@ function draw(size = 16) {
                 e.target.style.backgroundColor = 'black';
             }
         });
+        square.addEventListener('mousedown', (e) => {
+            e.target.style.backgroundColor = 'black';
+        });
+        grid.appendChild(square);
     }
 
 };
+
+draw();
+
+size.addEventListener('input', () => {
+    rangeValue.textContent = size.value;
+    draw(parseInt(size.value));
+});
+
+
+btnErase.addEventListener('click', () => {
+    const squares = document.querySelectorAll('.square');
+    squares.forEach(square => {
+        square.style.backgroundColor = 'white';
+    });
+});
+
+btnRandom.addEventListener('click', () => {
+    const squares = document.querySelectorAll('.square');
+    squares.forEach(square => {
+        square.addEventListener('mouseover', (e) => {
+            if (e.buttons === 1) {
+                e.target.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+            }
+        });
+        square.addEventListener('mousedown', (e) => {
+            e.target.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+        });
+    });
+});
+
 
 size.addEventListener('input', () => {
     rangeValue.textContent = size.value;
