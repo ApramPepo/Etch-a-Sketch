@@ -38,7 +38,8 @@ header {
     flex-wrap: wrap;
 }
 
-.right, .left {
+.right,
+.left {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -56,4 +57,17 @@ footer {
 
 footer div {
     padding-bottom: 3vh;
+}
+
+button {
+    margin-left: 4px;
+    width: 126px;
+    height: 100px;
+}
+
+span {
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 6px;
+    width: 20px;
 }

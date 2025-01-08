@@ -19,7 +19,9 @@
             <p>Make the World become true.</p>
         </nav>
         <section id="can">
-            <canvas id="grid"></canvas>
+            <canvas id="grid">
+                <div class="square"></div>
+            </canvas>
         </section>
 
         <nav class="right">
@@ -28,7 +30,7 @@
     </div>
 
     <footer>
-        <div><button class="btnGrid">Change Grid Size</button> <button class="btnErase">Erase</button> </div>
+        <div><button class="btnGrid">Change Grid Size</button> <input type="range" min="1" max="128" class="size"><span class="rangeValue">16</span><button class="btnErase">Erase</button> <button class="btnRandom">Randomize</button> </div>
         <p>Created by Abram Adel &copy; The Odin Project</p>
     </footer>
 </body>
