@@ -17,7 +17,7 @@ function draw(size = 16) {
     grid.style.width = '512px';
     grid.style.height = '512px';
 
-    const squareSize = `${512 / size}%`;
+    const squareSize = `${100 / size}%`;
 
     for (i = 0; i < size * size; i++) {
         const square = document.createElement('div');
