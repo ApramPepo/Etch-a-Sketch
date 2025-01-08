@@ -16,8 +16,25 @@ function draw(size = 16) {
     grid.style.width = '512px';
     grid.style.height = '512px';
 
+    const squareSize = `${100 / size}%`;
 
-}
+    for (i = 0; i < size * size; i++) {
+        const square = document.createElement('div');
+        square.classList.add('square');
+        square.style.flex = `0 0 ${squareSize}`;
+        square.style.height = squareSize;
+        square.style.border = `1px solid rgba(0, 0, 0, 0.1)`;
+        square.style.boxSizing = 'border-box';
+        square.style.backgroundColor = 'white';
+
+        square.addEventListener('mouseover', (e) => {
+            if (e.buttons === 1) {
+                e.target.style.backgroundColor = 'black';
+            }
+        });
+    }
+
+};
 
 size.addEventListener('input', () => {
     rangeValue.textContent = size.value;
