@@ -11,12 +11,13 @@ let y = 0;
 
 function draw(size = 16) {
     const grid = document.getElementById('grid');
+    grid.innerText = '';
     grid.style.display = 'flex';
     grid.style.flexWrap = 'wrap';
     grid.style.width = '512px';
     grid.style.height = '512px';
 
-    const squareSize = `${100 / size}%`;
+    const squareSize = `${512 / size}%`;
 
     for (i = 0; i < size * size; i++) {
         const square = document.createElement('div');
